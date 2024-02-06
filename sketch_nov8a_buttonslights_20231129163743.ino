@@ -24,8 +24,8 @@ void loop() {
   if (interPin != 255)
   {
     mcp0.clearInterrupts();
-    mcp1.digitalWrite(pins[interruptFlag], HIGH); // Turn on LED
+    mcp1.digitalWrite(pins[interPin], HIGH); // Turn on LED
     delay(4000); // Wait
-    mcp1.digitalWrite(pins[interruptFlag], LOW); // Turn off LED
+    mcp1.digitalWrite(pins[interPin], LOW); // Turn off LED
   }
 }
