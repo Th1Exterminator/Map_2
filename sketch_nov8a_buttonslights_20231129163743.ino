@@ -21,5 +21,5 @@ void setup() {
 
 void loop() {
   Serial.write(mcp0.getLastInterruptPin());
-  mcp1.writeGPIO(HIGH, mcp0.getLastInterruptPin());
+  mcp1.digitalWrite(mcp0.getLastInterruptPin(), HIGH);
 }
