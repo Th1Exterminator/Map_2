@@ -21,14 +21,5 @@ void setup() {
 }
 
 void loop() {
-  for(int x = 0; x < sizeof(buttons)/sizeof(int); x++) // Iterate through all buttons
-  {
-    if (mcp0.digitalRead(buttons[x]) == LOW) // Check state of buttons
-    {
-        Serial.write(mcp0.getLastInterruptPin());
-        mcp1.digitalWrite(lights[x], HIGH); // Turn on LED
-        delay(1000); // Wait
-        mcp1.digitalWrite(lights[x], LOW); // Turn off LED
-    }
-  }
+  Serial.write(mcp0.getLastInterruptPin());
 }
