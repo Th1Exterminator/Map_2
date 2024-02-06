@@ -20,6 +20,7 @@ void setup() {
 }
 
 void loop() {
-  Serial.write(mcp0.getLastInterruptPin());
-  mcp1.digitalWrite(mcp0.getLastInterruptPin(), HIGH);
+  uint8_t interPin = mcp0.getLastInterruptPin(); 
+  Serial.write(interPin);
+  mcp1.digitalWrite(interPin, HIGH);
 }
