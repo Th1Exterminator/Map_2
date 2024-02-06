@@ -12,6 +12,7 @@ void setup() {
   for(int x = 0;x < sizeof(pins)/sizeof(int); x++) // Iterates through all buttons
   {
     mcp0.pinMode(pins[x], INPUT_PULLUP); // Places Pin "x" into a natural HIGH state
+    mcp0.setupInterruptPin(pins[x], HIGH);
   } 
   for(int x = 0; x < sizeof(pins)/sizeof(int); x++) // Iterates through all LEDs
   {
