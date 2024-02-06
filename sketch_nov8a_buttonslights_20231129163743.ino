@@ -28,7 +28,7 @@ void loop() {
   	// Get Lastinterupt pin, save returned value to VAR
 	  // note on VAR: 0-15 are valid 255 means no interupt
 	} while (interruptFlag==255);
-
+  clearInterrupts()
   mcp1.digitalWrite(pins[interruptFlag], HIGH); // Turn on LED
   delay(4000); // Wait
   mcp1.digitalWrite(pins[interruptFlag], LOW); // Turn off LED
